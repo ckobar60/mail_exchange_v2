@@ -40,48 +40,39 @@ def email_conn(directory):
                                 filename = part.get_filename()
                                 filename=str(email.header.make_header(email.header.decode_header(filename)))
                                 if "6027108130" and "_Д" in filename:
-                                    print(directory +"Дива_Плюс/" + filename)
                                     fp = open(os.path.join(directory +"Дива_Плюс/", filename), 'wb')
                                     fp.write(part.get_payload(decode=1))
                                     fp.close
                                 elif "6027149513" and "_УТ" in filename:
-                                    print(directory +"Дитрейд/" + filename)
                                     fp = open(os.path.join(directory +"Дитрейд/", filename), 'wb')
                                     fp.write(part.get_payload(decode=1))
                                     fp.close
                                 elif "6027173812" and "_5ГК" in filename:
-                                    print(directory +"Мега_Холод/" + filename)
                                     fp = open(os.path.join(directory +"Мега_Холод/", filename), 'wb')
                                     fp.write(part.get_payload(decode=1))
                                     fp.close
                                 elif "7802548281_РЛ" in filename:
-                                    print(directory +"Региональная_Логистика/" + filename)
                                     fp = open(os.path.join(directory +"Региональная_Логистика/", filename), 'wb')
                                     fp.write(part.get_payload(decode=1))
                                     fp.close
                                 elif "7811215747_ГЛ" in filename:
-                                    print(directory +"Глобал_Лоджистикс/" + filename)
                                     fp = open(os.path.join(directory +"Глобал_Лоджистикс/", filename), 'wb')
                                     fp.write(part.get_payload(decode=1))
                                     fp.close
                                 elif "532111776395_" in filename:
-                                    print(directory +"Пр._Никоноров/" + filename)
                                     fp = open(os.path.join(directory +"Пр._Никоноров/", filename), 'wb')
                                     fp.write(part.get_payload(decode=1))
                                     fp.close
                                 elif "6001000149_" and "_РайпоБежаницы-" in filename:
                                     if ".rnp" in filename:
-                                        print((directory + "Пушгоры_МСЗ/" + str(datetime.date.today()) +"/" + filename))
                                         fp = open(os.path.join(directory + "Пушгоры_МСЗ/" + str(datetime.date.today()) + "/" , filename), 'wb')
                                         fp.write(part.get_payload(decode=1))
                                         fp.close
                                     elif "6001000149_" and "_РайпоБежаницы-Дедовичи" in filename:
-                                        print((directory + "Пушгоры_МСЗ/" + str(datetime.date.today()) +"/" , filename + ".rnp"))
                                         fp = open(os.path.join(directory + "Пушгоры_МСЗ/" + str(datetime.date.today()) + "/" , filename + ".rnp"), 'wb')
                                         fp.write(part.get_payload(decode=1))
                                         fp.close
                                     elif "6001000149_" and "_РайпоБежаницы-" in filename:
-                                        print(directory + "Пушгоры_МСЗ/" + str(datetime.date.today()) +"/" , filename + "горячий_хлеб.rnp")
                                         fp = open(os.path.join(directory + "Пушгоры_МСЗ/" + str(datetime.date.today()) + "/" , filename + "горячий_хлеб.rnp"), 'wb')
                                         fp.write(part.get_payload(decode=1))
                                         fp.close
